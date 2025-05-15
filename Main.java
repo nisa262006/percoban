@@ -10,8 +10,7 @@ public class Main{
 
         // print the list 
         system.out.println("Linked List after insertions:");
-        list.printListForward(); // ekpected forward: Ainun -> Andi -> Rahma -> Tiara -> null
-        list.printListBackward(); // ekpected forward: Tiara -> Rahma -> Andi -> Ainun -> null
+        list.printList(); // ekpected forward: Ainun -> Andi -> Rahma -> Tiara -> null
 
         // insert after a specific node 
         Node nodeBudi = list.gitNode("Ainun");
@@ -22,23 +21,20 @@ public class Main{
 
     // print the list after insertAfter
     system.out.println("\nLinked List after insertting Eka after Ainun");
-    list.printListForward(); 
-    list.printListBackward(); 
+    list.printList(); 
 
     // DELETE A NODE
     list.deleteNode("Rahma");
 
     //print the list after deletion
     system.out.println("\nLinked List after deliting Rahma:");
-    list.printListForward(); 
-    list.printListBackward(); 
+    list.printList();  
 
     // delet a non-existrnt node
     list.deleteNode("Fajar");
 
     //print the list after tring to delete non-existent node
     system.out.printlm("\nLinkd List after trying to delete Fajar:");
-    list.printListForward();
-    list.printListBackward();
+    list.printList();
 
 }
