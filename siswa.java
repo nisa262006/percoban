@@ -1,5 +1,5 @@
 public class siswa {
-    sting nama;
+    String nama;
     siswa berikutnya;
 
     // buat constructor sendiri
@@ -10,7 +10,7 @@ public class siswa {
     }
     */
 
-    public siswa(string x){
-    nama = x
+    public siswa(String x){
+    nama = x;
     }
 }

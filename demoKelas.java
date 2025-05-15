@@ -1,13 +1,14 @@
 public class demoKelas {
-    public static void main (string[] args) {
+    public static void main(String[] args) {
         siswa Rahma = new siswa("Rahma");
 
-        kelas K = new kelas(Rahma);
+        Kelas k = new Kelas(Rahma);
 
-        siswa Amanda = new siswa("Amanda");
-        k.tambahDiBelakang("Aamanda");
+        siswa endi = new siswa("Endi");
+        k.tambahDiBelakang(new siswa ("Rahma"));
+        k.tambahDiBelakang(new siswa("Amanda"));
         k.tambahDiBelakang(new siswa("Ainun"));
         k.tambahDiBelakang(new siswa("Mutara"));
-        k.tampilkanSemua();
+        k.tampilkansemua(); 
     }
 }
