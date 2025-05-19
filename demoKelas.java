@@ -16,6 +16,6 @@ public class demoKelas {
         System.out.println("jumlah siswa: " + k.jumlahsiswa());
         System.out.println("urutan Riska: " + k.urutan("Riska"));
         System.out.println("siswa di index 2: " + k.ambilDi(2).nama);
- hallo
+ 
     }
 }

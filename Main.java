@@ -1,7 +1,7 @@
 public class Main{
     public static void main(String[] args){
         LinkedList list = new LinkedList();
-haloo
+
         //insert element
         list.insertAtEnd("Dewa");
         list.insertAtBeginning("Michael");

@@ -13,5 +13,4 @@ public class siswa {
     public siswa(String x){
     nama = x;
     }
-    haloo
 }

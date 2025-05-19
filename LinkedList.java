@@ -4,7 +4,7 @@ public class LinkedList {
     public LinkedList() {
         this.head = null;
     }
-hallo
+
     // Method to insert a new node at the beginning of the list
     public void insertAtBeginning(String content) {
         Node newNode = new Node(content);
