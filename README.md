@@ -4,3 +4,4 @@
 2. struktur data linear dan non-linear
 3. array dan linked list
 4. update
+haloo

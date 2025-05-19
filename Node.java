@@ -5,6 +5,6 @@ public class Node{
     public Node(String content){
         this.content = content;
         this.next = null;
-
+haloo
     }
 }
