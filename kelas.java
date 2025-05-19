@@ -6,23 +6,72 @@ public class Kelas {
     }
 
     public siswa ambilDi(Integer index){
+        if (index < 0){
         return null;
+    }
+    siswa sekarang = pertama;
+    int hitung = 0;
+
+    while (sekarang != null && hitung < index);{
+        sekarang = sekarang.berikutnya;
+        hitung++;
+        }
+        return (sekarang == null) ? null : sekarang;
     }
 
     public Integer urutan(String nama){
+        siswa sekarang = pertama;
+        int urutan =0;
+
+        while (sekarang != null){
+            if (sekarang.nama.equals(nama)){
+                return urutan;
+            }
+            sekarang = sekarang.berikutnya;
+            urutan++;
+        }
         return null;
     }
 
     public Integer jumlahsiswa(){
-        return null;
+        siswa sekarang = pertama;
+        int jumlah = 0;
+
+        while (sekarang != null){
+            jumlah++;
+            sekarang = sekarang.berikutnya;
+        }
+        return jumlah;
     }
 
     public void tambahSetelah(String nama, siswa s){
+        siswa sekarang = pertama;
 
+        while (sekarang != null){
+            if (sekarang.nama.equals(nama)){
+                s.berikutnya = sekarang.berikutnya;
+                sekarang.berikutnya = s;
+                return;
+            }
+            sekarang = sekarang.berikutnya;
+        }
     }
 
     public void hapus(String nama){
-
+        if (pertama == null){
+            return;
+        }
+        if (pertama.nama.equals(nama)){
+            return;
+        }
+        siswa sekarang =pertama;
+        while (sekarang.berikutnya != null){
+            if (sekarang.berikutnya.nama.equals(nama)){
+                sekarang.berikutnya = sekarang.berikutnya.berikutnya;
+                return;
+            }
+            sekarang = sekarang.berikutnya;
+        }
     }
 
     public void tambahDiBelakang(siswa s){
