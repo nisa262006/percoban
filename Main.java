@@ -1,39 +1,38 @@
-public class Main{
+public class Main {
     public static void main(String[] args){
         LinkedList list = new LinkedList();
 
-        //insert element
-        list.insertAtEnd("Dewa");
-        list.insertAtBeginning("Michael");
-        list.insertAtEnd("Miftah");
-        list.insertAtEnd("ICANNN");
+        // Insert element
+        list.insertAtEnd("Ainun");
+        list.insertAtBeginning("Rahma");
+        list.insertAtEnd("Tiara");
+        list.insertAtEnd("Amanda");
 
-        // print the list
-        System.out.println("Linked List jika datanya sudah dimasukkan");
-        list.printList(); // semoga : Michael > Dewa > Miftah > Icannn > null
-        
-        // insert after a specific node
-        Node nodeDewa = list.getNode("Dewa");
-        if (nodeDewa != null) {
-            list.insertAfter(nodeDewa, "tipp");
+        // Print the list
+        System.out.println("Linked List after insertions:");
+        list.printList(); 
+        // Insert after a spesific node
+        Node nodeBudi = list.getNode("Budi");
+        if (nodeBudi != null) {
+            list.insertAfter(nodeBudi, "Eka");
         }
 
-        // print the list after insertAfter
-        System.out.println("\nLinked List after inserting tipp after Dewa:");
-        list.printList();
+        // Print the list after insertAfter
+        System.out.println("\nLinked List after inserting Eka after Budi:");
+        list.printList(); 
 
-        // delete a node
-        list.deleteNode("Miftah");
+        // Delete a node
+        list.deleteNode("Citra");
 
-        // print the list after deletion
-        System.out.println("\nLinked List after deleting Miftah:");
-        list.printList(); // semoga : Michael > Dewa > tipp > Icannn > null
+        // Print the list after detetion
+        System.out.println("\nLinked List after deleting Citra:");
+        list.printList(); 
 
-        // delete a non-existent node
-        list.deleteNode("Garry");
+        // Deleting a non-existent node
+        list.deleteNode("Fajar");
 
-        // print the list after trying to delete non-existent node
-        System.out.println("\nlinked List after trying to delete Garry:");
-        list.printList(); // semoga : Michael > dewa > tipp > icannn
+        // Print the list after trying to delete non-existent node
+        System.out.println("\nLinked List after trying yo deletie Fajar:");
+        list.printList(); 
     }
-}
+}        
