@@ -9,7 +9,6 @@ public class demoKelas {
         k.tambahDiBelakang(new siswa("Amanda"));
         k.tambahDiBelakang(new siswa("Ainun"));
         k.tambahDiBelakang(new siswa("Tiara"));
-        k.hapus("Riska");
         k.tampilkansemua(); 
 
         System.out.println("jumlah siswa: " + k.jumlahsiswa());
@@ -19,5 +18,12 @@ public class demoKelas {
         k.hapus("Riska");
         System.out.println("setelah hapus Riska:");
         k.tampilkansemua();
+
+        k.tambahDiDepan(new siswa ("Azmi"));
+        k.tampilkansemua();
+
+        k.tambahSetelah ("Riska", new siswa ("Nisa"));
+        k.tampilkansemua();
+
     }
 }

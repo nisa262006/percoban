@@ -8,15 +8,12 @@ public class Kelas {
     }
 
     public siswa ambilDi(Integer index){
-        if (index < 0){
-        return null;
-    }
-    siswa sekarang = pertama;
-    int hitung = 0;
-
-    while (sekarang != null && hitung < index);{
-        sekarang = sekarang.berikutnya;
-        hitung++;
+        if (index < 0) return null;
+        siswa sekarang = pertama;
+        int hitung = 0;
+        while (sekarang != null && hitung < index){
+            sekarang = sekarang.berikutnya;
+            hitung++;
         }
         return (sekarang == null) ? null : sekarang;
     }
@@ -26,9 +23,7 @@ public class Kelas {
         int urutan =0;
 
         while (sekarang != null){
-            if (sekarang.nama.equals(nama)){
-                return urutan;
-            }
+            if (sekarang.nama.equals(nama)) return urutan;
             sekarang = sekarang.berikutnya;
             urutan++;
         }
@@ -46,6 +41,12 @@ public class Kelas {
         return jumlah;
     }
 
+    public void tambahDiDepan(siswa s){
+        s.berikutnya = pertama;
+        pertama = s;
+        if (terakhir == null) terakhir = pertama;
+    }
+
     public void tambahSetelah(String nama, siswa s){
         siswa sekarang = pertama;
 
@@ -60,37 +61,38 @@ public class Kelas {
     }
 
     public void hapus(String nama){
-        if (pertama == null){
-            return;
-        }
+        if (pertama == null) return;
         if (pertama.nama.equals(nama)){
+            pertama = pertama.berikutnya;
+            if (pertama == null) terakhir = null;
             return;
         }
-        siswa sekarang =pertama;
-        while (sekarang.berikutnya != null){
-            if (sekarang.berikutnya.nama.equals(nama)){
-                sekarang.berikutnya = sekarang.berikutnya.berikutnya;
-                return;
-            }
+        siswa sekarang = pertama;
+        siswa sebelumnya = null;
+        while (sekarang != null && !sekarang.nama.equals(nama)){
+            sebelumnya = sekarang;
             sekarang = sekarang.berikutnya;
+            }
+            if (sekarang != null) {
+                sebelumnya.berikutnya = sekarang.berikutnya;
+                if (sekarang == terakhir) terakhir = sebelumnya;
         }
     }
 
     public void tambahDiBelakang(siswa s){
-        siswa terakhir = cariTerakhir();
-        terakhir.berikutnya = s;
+        if (terakhir == null){
+            pertama = s;
+        }else {
+            terakhir.berikutnya =s;
+        }
+        terakhir = s;
     }
     
     public void tampilkansemua() {
-        Integer urutan = 0;
-        System.out.println("sekarang urutan ke :"+urutan);
-
+        System.out.println("daftar siswa:");
         siswa sekarang = pertama; //Rahma
-        System.out.println("siswa sekarang :"+sekarang.nama);
-
         while(sekarang.berikutnya != null) {
-            urutan++;
-            System.out.println("sekarang urutan :"+urutan);
+            System.out.println("sekarang");
             // pindah ke recodr berikutnya
             sekarang = sekarang.berikutnya;
             System.out.println("siswa sekarang :"+sekarang.nama);
@@ -100,6 +102,7 @@ public class Kelas {
     }
     private siswa cariTerakhir(){
         siswa sekarang = pertama;
+        if (sekarang == null) return null;
         while(sekarang.berikutnya != null){
             sekarang = sekarang.berikutnya;
         }
