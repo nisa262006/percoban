@@ -1,8 +1,10 @@
 public class Kelas {
     siswa pertama;
+    siswa terakhir;
 
     public Kelas(siswa x) {
-        pertama= x;
+        pertama = x;
+        terakhir =  x;
     }
 
     public siswa ambilDi(Integer index){
