@@ -1,16 +1,16 @@
 public class antrian{
-    pembeli depan;
+    pembeli sekarang;
     pembeli terakhir;
 
 
     public antrian(){
-        this.depan = null;
+        this.sekarang = null;
         this.terakhir = null;
     }
 
     public void tambahPengantri (pembeli p){
         if (habiskah()){
-            depan = p;
+            sekarang = p;
             terakhir = p;
         }else{
             terakhir.next = p;
@@ -24,10 +24,10 @@ public class antrian{
             System.out.println("antrian kosong, tidak ada pembeli");
             return null;
         }
-        pembeli pembeliDilayani = depan;
-        depan = depan.next;
+        pembeli pembeliDilayani = sekarang;
+        sekarang = sekarang.next;
 
-        if (depan == null){
+        if (sekarang == null){
             terakhir = null;
         }
         System.out.println( pembeliDilayani.getNama()+ "telah di layani");
