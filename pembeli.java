@@ -1,10 +1,10 @@
 public class pembeli {
     String nama;
-    pembeli selanjutnya;
+    pembeli next;
 
     public pembeli (String nama){
         this.nama = nama;
-        this.selanjutnya = null;
+        this.next = null;
     }
     public String getNama(){
         return nama;
