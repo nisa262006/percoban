@@ -2,28 +2,28 @@ public class demoKelas {
     public static void main(String[] args) {
         siswa Rahma = new siswa("Rahma");
 
-        Kelas k = new Kelas(Rahma);
+        Kelas K = new Kelas(Rahma);
 
         siswa Riska = new siswa("Riska");
-        k.tambahDiBelakang(new siswa ("Riska"));
-        k.tambahDiBelakang(new siswa("Amanda"));
-        k.tambahDiBelakang(new siswa("Ainun"));
-        k.tambahDiBelakang(new siswa("Tiara"));
-        k.tampilkansemua(); 
+        K.tambahDiBelakang(new siswa ("Riska"));
+        K.tambahDiBelakang(new siswa("Amanda"));
+        K.tambahDiBelakang(new siswa("Ainun"));
+        K.tambahDiBelakang(new siswa("Tiara"));
+        K.tampilkansemua(); 
 
-        System.out.println("jumlah siswa: " + k.jumlahsiswa());
-        System.out.println("urutan Riska: " + k.urutan("Riska"));
-        System.out.println("siswa di index 2: " + k.ambilDi(2).nama);
+        System.out.println("jumlah siswa: " + K.jumlahsiswa());
+        System.out.println("urutan Riska: " + K.urutan("Riska"));
+        System.out.println("siswa di index 2: " + K.ambilDi(2).nama);
 
-        k.hapus("Riska");
+        K.hapus("Riska");
         System.out.println("setelah hapus Riska:");
-        k.tampilkansemua();
+        K.tampilkansemua();
 
-        k.tambahDiDepan(new siswa ("Azmi"));
-        k.tampilkansemua();
+        K.tambahDiDepan(new siswa ("Azmi"));
+        K.tampilkansemua();
 
-        k.tambahSetelah ("Riska", new siswa ("Nisa"));
-        k.tampilkansemua();
+        K.tambahSetelah ("Riska", new siswa ("Nisa"));
+        K.tampilkansemua();
 
     }
 }
