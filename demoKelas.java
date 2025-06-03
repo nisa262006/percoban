@@ -15,14 +15,16 @@ public class demoKelas {
         System.out.println("urutan Riska: " + K.urutan("Riska"));
         System.out.println("siswa di index 2: " + K.ambilDi(2).nama);
 
-    
-        K.hapus("Riska");
-        System.out.println("setelah hapus Riska:");
+        System.out.println("=====================");
+        K.hapus("Amanda");
+        System.out.println("setelah hapus Amanda:");
         K.tampilkansemua();
 
+        System.out.println("=====================");
         K.tambahDiDepan(new siswa ("Azmi"));
         K.tampilkansemua();
 
+        System.out.println("=====================");
         K.tambahSetelah ("Riska", new siswa ("Nisa"));
         K.tampilkansemua();
 
