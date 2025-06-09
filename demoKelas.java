@@ -11,11 +11,11 @@ public class demoKelas {
         K.tambahDiBelakang(new siswa("Tiara"));
         K.tampilkansemua(); 
 
+        System.out.println("--------------");
         System.out.println("jumlah siswa: " + K.jumlahsiswa());
         System.out.println("urutan Riska: " + K.urutan("Riska"));
         System.out.println("siswa di index 2: " + K.ambilDi(2).nama);
 
-        System.out.println("=====================");
         K.hapus("Amanda");
         System.out.println("setelah hapus Amanda:");
         K.tampilkansemua();
