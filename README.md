@@ -5,3 +5,4 @@
 3. array dan linked list
 4. update
 haloo
+queue
