@@ -1,8 +1,8 @@
 public class demoKelas {
     public static void main(String[] args) {
-        siswa Rahma = new siswa("Rahma");
+        siswa Nisa = new siswa("Rahma");
 
-        Kelas K = new Kelas(Rahma);
+        Kelas K = new Kelas(Nisa);
 
         siswa Riska = new siswa("Riska");
         K.tambahDiBelakang(new siswa ("Riska"));
